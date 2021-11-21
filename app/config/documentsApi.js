@@ -38,12 +38,42 @@ module.exports = documents;
  *              type: number
  *          fecha:
  *              type: date
+ *          estado:
+ *              type: booleano
  *        required:
  *            -marca
  *            -cantidad  
  *        example:
  *           marca: toyota
  *           cantidad: 2
+ */
+
+//Creacion del esquema para editar una orden de produccion
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *      editar:
+ *        type: object
+ *        properties:
+ *          id:
+ *              type: number
+ *          marca:
+ *              type: string
+ *          cantidad:
+ *              type: number
+ *          fecha:
+ *              type: date
+ *          estado:
+ *              type: booleano
+ *        required:
+ *            -marca
+ *            -cantidad 
+ *            -estado 
+ *        example:
+ *           marca: toyota
+ *           cantidad: 2
+ *           estado: true
  */
 
 //Endpoint para crear nuevas ordenes
@@ -103,7 +133,7 @@ module.exports = documents;
  *              application/json:
  *                  schema:
  *                      type: object
- *                      $ref: '#/components/schemas/vehicles'
+ *                      $ref: '#/components/schemas/editar'
  *      responses:
  *          200:
  *              description: Update order

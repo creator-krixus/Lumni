@@ -10,7 +10,7 @@ controller.getOrders = (req, res) => {
                 if(err){
                     return res.send(err);
                 }else{
-                     res.json({ data:rows });
+                     res.json(rows);
                 }
             })
         }
