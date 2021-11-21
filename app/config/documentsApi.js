@@ -40,12 +40,16 @@ module.exports = documents;
  *              type: date
  *          estado:
  *              type: booleano
+ *          horas:
+ *              type: number
  *        required:
  *            -marca
- *            -cantidad  
+ *            -cantidad 
+ *            -horas 
  *        example:
  *           marca: toyota
  *           cantidad: 2
+ *           horas: 1
  */
 
 //Creacion del esquema para editar una orden de produccion
@@ -66,14 +70,18 @@ module.exports = documents;
  *              type: date
  *          estado:
  *              type: booleano
+ *          horas:
+ *              type: number
  *        required:
  *            -marca
  *            -cantidad 
  *            -estado 
+ *            -horas
  *        example:
  *           marca: toyota
  *           cantidad: 2
  *           estado: true
+ *           horas: 1
  */
 
 //Endpoint para crear nuevas ordenes
